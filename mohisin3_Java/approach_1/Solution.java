@@ -46,8 +46,23 @@ public class Solution {
             }
         }
         System.out.print("The Decrypted text is: ");
+        String output = "";
         for(String word:res){
-            System.out.print(word + " ");
+            output += word + " ";
         }
+        System.out.println(output);
+        try {
+            FileWriter myWriter = new FileWriter("DecryptedMessage.txt");
+            myWriter.write(output);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        
     }
 }
+
+/*
+Time Complexity: O(26*m*n) i.e O(m*n) where m is the number of words and n is the length of each word
+*/
