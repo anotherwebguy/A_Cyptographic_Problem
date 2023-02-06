@@ -65,4 +65,5 @@ public class Solution {
 
 /*
 Time Complexity: O(26*m*n) i.e O(m*n) where m is the number of words and n is the length of each word
+Considering our api uses a map datas structure to store the words and their meanings, the time complexity of the getMeaning method is O(1).
 */
